@@ -9,8 +9,7 @@ SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-# Modification de la route pour accepter POST à la racine
-@app.route('/', methods=['POST'])
+@app.route('/sms', methods=['POST'])
 def sms_reply():
     from_number = request.form.get('From')
     body = request.form.get('Body')
