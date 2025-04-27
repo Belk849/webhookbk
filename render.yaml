@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sms-webhook
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: SUPABASE_URL
+        value: ton_url_supabase
+      - key: SUPABASE_KEY
+        value: ta_clef_secrete_supabase
